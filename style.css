@@ -60,20 +60,20 @@ nav {
   background-color: #ffb860;
 }
 
-.search-bar{
-    display: flex;
-    align-items: center;
-  gap: .5rem;
-  input{
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  input {
     transition: 200ms all ease;
   }
-  .open{
+  .open {
     width: 10rem;
     border: 1px;
-    padding: .2rem;
+    padding: 0.2rem;
     border-radius: 8px;
   }
-  .closed{
+  .closed {
     width: 0px;
     border: 0;
   }
@@ -81,7 +81,7 @@ nav {
 
 #links {
   align-items: center;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   gap: 10px;
   height: 8%;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -89,7 +89,7 @@ nav {
   -webkit-backdrop-filter: blur(7.8px);
 }
 nav span {
-  padding: .3rem .6rem;
+  padding: 0.3rem 0.6rem;
   background-color: lightblue;
   font-weight: 700;
 }
@@ -102,8 +102,14 @@ aside {
   width: 25%;
   background-color: white;
   top: 0;
+  height: 100vh;
   border-radius: 1px;
   padding: 4% 2%;
+  border-left: 1px solid rgba(200, 200, 200, 0.579);
+  border-top: 1px solid rgba(200, 200, 200, 0.579);
+}
+aside h1 {
+  font-size: 200%;
 }
 aside li {
   list-style: none;
@@ -129,35 +135,30 @@ section {
   background-color: white;
   display: flex;
   flex-direction: column;
+  align-items: center;
   border-radius: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7.8px);
   -webkit-backdrop-filter: blur(7.8px);
+  margin-block: 3%;
 }
-#title {
+section div {
   padding: 1%;
   border-radius: 10px;
   width: 20%;
   color: white;
+  align-self: flex-start;
   text-align: center;
   background-color: #ffb860;
   margin-bottom: 2%;
   margin-right: 2%;
-}
-#content {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-  margin: 2% 4%;
-}
-#content img {
-  height: 20vh;
 }
 hr {
   width: 100%;
   margin-bottom: 5%;
 }
 p {
+  width: 90%;
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
@@ -187,4 +188,5 @@ section h1 {
   color: #2958d2;
   font-size: 180%;
   font-weight: 700;
+  margin-bottom: 4%;
 }
