@@ -17,6 +17,9 @@ xhr.onload = () => {
         p.innerText = blog.blog;
         category.innerText = blog.category;
         title.innerText = blog.title;
+        button.addEventListener("click" , () =>{
+            window.location.href = "detail-page/index.html?id="+blog.id.toString();
+        });
         section.appendChild(category);
         section.appendChild(hr);
         section.appendChild(title);
@@ -54,9 +57,6 @@ HTMLElement.prototype.setSearchIcon = function () {
     this.classList.add('fa-magnifying-glass');
 }
 
-function header() {
-    window.location.href = "detail-page/index.html?id="+id.toString();
-}
 function search() {
     let blogsTitles = document.querySelectorAll("section h1");
     for (const title of blogsTitles) {

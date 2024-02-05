@@ -79,7 +79,14 @@
     <script>
         let params = new URLSearchParams(location.search);
         let id = params.get("id");
-        console.log(id);
+        let paragraph = document.querySelector(".text-wrap");
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", "../blogs.json", true);
+        xhr.onload = () => {
+            let jsonData = JSON.parse(xhr.responseText);
+            paragraph.innerText = jsonData["blogs"][id-1].blog;
+        }
+        xhr.send();
     </script>
 </body>
 
