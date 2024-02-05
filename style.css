@@ -115,15 +115,23 @@ aside li {
   list-style: none;
   font-size: 120%;
   font-weight: 600;
-  margin-bottom: 14%;
+  margin-bottom: 16%;
   text-align: center;
   padding: 3%;
+  display: block;
+  padding: 2% 4%;
+  border-radius: 4px;
+  cursor: pointer;
+}
+aside li:hover {
+  background-color: #ffb860;
+  color: white;
 }
 aside div {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 6% 12% 23% 0%;
+  margin: 6% 12% 30% 0%;
   color: #ffb860;
 }
 aside img {

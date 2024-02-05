@@ -59,13 +59,16 @@ HTMLElement.prototype.setSearchIcon = function () {
 
 function search() {
     let blogsTitles = document.querySelectorAll("section h1");
-    for (const title of blogsTitles) {
-        if (title.innerText.includes(searchInput.value)) {
-            title.parentElement.style.display="flex";
+    for (const i = 0; i<blogsTitles.length; i++) {
+        if (blogsTitles[i].innerText.includes(searchInput.value)) {
+            blogsTitles[i].parentElement.style.display="flex";
         }
         else{
-            title.parentElement.style.display="none";
+            blogsTitles[i].parentElement.style.display="none";
         }
+    }
+    if (i<asideLinks.length) {
+        asideLinks[i]
     }
 }
 for (const link of asideLinks) {
