@@ -1,5 +1,6 @@
 let xhr = new XMLHttpRequest();
-let id = "";
+let linksBar = document.getElementById("links");
+let exist = false;
 xhr.open("GET", "blogs.json", true);
 xhr.onload = () => {
     let article = document.querySelector("article");
@@ -74,6 +75,7 @@ function search() {
 for (const link of asideLinks) {
     link.addEventListener("click" , () =>{
         let categoryse = document.querySelectorAll("section div");
+        
         for (const x of categoryse) {
             if (!(link.innerText === x.innerText)) {
                 x.parentElement.style.display="none";
@@ -82,5 +84,16 @@ for (const link of asideLinks) {
                 x.parentElement.style.display="flex";
             }
         }
+        if (exist == false) {
+            let roundedPill = document.createElement("span");
+            roundedPill.classList.add("rounded-pill");
+            roundedPill.setAttribute("id", "added-pill")
+            roundedPill.innerText = link.innerHTML;
+            linksBar.appendChild(roundedPill);
+        }
+        else{
+            document.getElementById("added-pill").innerText = link.innerText;
+        }
+        exist = true;
     });
 }

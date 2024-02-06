@@ -80,7 +80,6 @@ nav {
 }
 
 #links {
-  align-items: center;
   padding: 0.5rem 2rem;
   gap: 10px;
   height: 8%;
@@ -89,9 +88,11 @@ nav {
   -webkit-backdrop-filter: blur(7.8px);
 }
 nav span {
-  padding: 0.3rem 0.6rem;
+  padding: 0.2% 0.5%;
   background-color: lightblue;
   font-weight: 700;
+  text-align: center;
+  min-width: 8%;
 }
 main {
   display: flex;
@@ -131,7 +132,7 @@ aside div {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 6% 12% 30% 0%;
+  margin: 13% 12% 30% 0%;
   color: #ffb860;
 }
 aside img {
@@ -165,7 +166,7 @@ hr {
   width: 100%;
   margin-bottom: 5%;
 }
-p {
+section p {
   width: 90%;
   display: -webkit-box;
   -webkit-line-clamp: 5;
