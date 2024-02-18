@@ -135,6 +135,10 @@ aside div {
   margin: 13% 12% 30% 0%;
   color: #ffb860;
 }
+.asidLink{
+  background-color: #ffb860;
+  color: white;
+}
 aside img {
   width: 20%;
   margin-left: 3%;
@@ -198,4 +202,9 @@ section h1 {
   font-size: 180%;
   font-weight: 700;
   margin-bottom: 4%;
+}
+footer {
+  text-align: end;
+  background-color: #ffb860;
+  padding: 2%;
 }

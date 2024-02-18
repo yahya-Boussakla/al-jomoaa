@@ -73,15 +73,20 @@ function search() {
     }
 }
 for (const link of asideLinks) {
+  
     link.addEventListener("click" , () =>{
         let categoryse = document.querySelectorAll("section div");
+        for (const test of asideLinks) {
+            test.classList.remove("asidLink");
+        }
+        link.classList.add("asidLink");
         
-        for (const x of categoryse) {
-            if (!(link.innerText === x.innerText)) {
-                x.parentElement.style.display="none";
+        for (const element of categoryse) {
+            if (!(link.innerText === element.innerText)) {
+                element.parentElement.style.display="none";
             }
             else{
-                x.parentElement.style.display="flex";
+                element.parentElement.style.display="flex";
             }
         }
         if (exist == false) {
