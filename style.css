@@ -98,11 +98,11 @@ main {
   display: flex;
   flex-direction: row;
 }
-aside {
-  position: sticky;
+aside{
+  position: -webkit-sticky;
+  top: 0;
   width: 25%;
   background-color: white;
-  top: 0;
   height: 100vh;
   border-radius: 1px;
   padding: 4% 2%;
@@ -135,7 +135,7 @@ aside div {
   margin: 13% 12% 30% 0%;
   color: #ffb860;
 }
-.asidLink{
+.asidLink {
   background-color: #ffb860;
   color: white;
 }

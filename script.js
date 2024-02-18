@@ -13,13 +13,12 @@ xhr.onload = () => {
         let hr = document.createElement("hr");
         let p = document.createElement("p");
         let button = document.createElement("button");
-        button.setAttribute("onclick", "header()");
         button.innerText = "اقرأ المزيد";
         p.innerText = blog.blog;
         category.innerText = blog.category;
         title.innerText = blog.title;
         button.addEventListener("click" , () =>{
-            window.location.href = "detail-page/index.html?id="+blog.id.toString();
+            window.location.href="/detail-page/index.html?id="+blog.id.toString();
         });
         section.appendChild(category);
         section.appendChild(hr);
@@ -60,7 +59,7 @@ HTMLElement.prototype.setSearchIcon = function () {
 
 function search() {
     let blogsTitles = document.querySelectorAll("section h1");
-    for (const i = 0; i<blogsTitles.length; i++) {
+    for (let i = 0; i<blogsTitles.length; i++) {
         if (blogsTitles[i].innerText.includes(searchInput.value)) {
             blogsTitles[i].parentElement.style.display="flex";
         }
