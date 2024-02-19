@@ -18,7 +18,7 @@ xhr.onload = () => {
         category.innerText = blog.category;
         title.innerText = blog.title;
         button.addEventListener("click" , () =>{
-            window.location.href="/detail-page/index.html?id="+blog.id.toString();
+            window.location.href="detail-page/index.html?id="+blog.id.toString();
         });
         section.appendChild(category);
         section.appendChild(hr);
